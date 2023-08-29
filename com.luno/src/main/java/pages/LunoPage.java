@@ -23,6 +23,9 @@ public class LunoPage extends DriverHandler {
     @FindBy(xpath = "/html/body/luno-auth-app/luno-navigation/mat-sidenav-container/mat-sidenav-content/main/luno-signup/section/luno-content/mat-card/form/div/mat-card-actions/luno-button/luno-submit-button/button/span[1]")
     WebElement letsGobutton;
 
+    @FindBy(xpath = "//*[@id=\"recaptcha-anchor\"]/div[1]")
+    WebElement Captcha;
+
     WebDriverWait wait;
 
     //Initialize Page Objects
@@ -42,7 +45,8 @@ public class LunoPage extends DriverHandler {
     public void clickletsGobutton() {
         letsGobutton.click();
     }
-    /*public boolean successMessageDisplayed() {
-        return wait.until(ExpectedConditions.visibilityOf(signUpSuccessMessage)).isDisplayed();
-    }*/
+    public void clickCaptchabutton() {
+        Captcha.click();
+    }
+
 }
