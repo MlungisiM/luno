@@ -40,7 +40,6 @@ public class DriverHandler {
     public void startBrowser() {
 
         String browserName = prop.getProperty("browser");
-        System.setProperty("webdriver.http.factory", "jdk-http-client");
 
         if ("chrome".equalsIgnoreCase(browserName)) {
             WebDriverManager.chromedriver().setup();
