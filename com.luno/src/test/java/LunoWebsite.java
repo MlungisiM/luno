@@ -30,7 +30,7 @@ public class LunoWebsite extends DriverHandler {
         lunoPage.enterUsername(invalidusername);
         lunoPage.enterPassword(invalidpassword);
         lunoPage.clickletsGobutton();
-        //Assert.assertTrue(lunoPage.UnsuccessMessageDisplayed());
+        Assert.assertTrue(driver.getTitle()=="signup");
     }
     @Test(priority = 2)
     public void validsignUp() {
@@ -38,7 +38,7 @@ public class LunoWebsite extends DriverHandler {
         lunoPage.enterUsername(validusername);
         lunoPage.enterPassword(validpassword);
         lunoPage.clickletsGobutton();
-        //Assert.assertTrue(lunoPage.successMessageDisplayed());
+        Assert.assertTrue(driver.getTitle()=="confirm_email");
     }
 
     @AfterMethod
