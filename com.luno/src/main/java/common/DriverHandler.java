@@ -53,7 +53,7 @@ public class DriverHandler {
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.get("https://www.luno.com");
+        driver.get("url");
 
     }
 
